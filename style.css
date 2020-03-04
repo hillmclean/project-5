@@ -258,7 +258,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #ffffff;
   font-family: "exomedium";
   font-size: 1rem;
   line-height: 1.5; }
@@ -440,11 +440,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #ffffff; }
   a:visited {
-    color: purple; }
+    color: #ffffff; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #018d01; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -599,6 +599,9 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5rem; }
+
+.entry-content p {
+  color: #ffffff; }
 
 /*--------------------------------------------------------------
 # Media

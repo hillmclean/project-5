@@ -21,7 +21,7 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content' ); ?>
+        <?php get_template_part( 'template-parts/content' ); ?>
 
 			<?php endwhile; ?>
 
@@ -31,7 +31,9 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php endif; ?>
+    <?php endif; ?>
+    
+    <button type="button" id="another-quote">Close Comments</button>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -31,3 +31,9 @@
 	clear: both;
 	margin: 0 0 $base__space-unit;
 }
+
+.entry-content {
+	p {
+		color: $color__text-main;
+	}
+}
