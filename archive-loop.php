@@ -24,19 +24,30 @@ get_header(); ?>
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
       </header><!-- .page-header -->
-      
-      <?php 
-      $args = array(
-        'post-type'=> 'post',
-      );
-      $quotes = get_posts ($args); ?> 
 
-<ol>
-  <?php 
-  $wptc = wp_tag_cloud('smallest=12&largest=12&orderby=count&order=DESC&format=array&unit=px&echo=0'); 
-  foreach( $wptc as $wpt ) echo "<li>" . $wpt . "</li>\n"; 
-  ?>
-</ol>
+      <ul>
+        <?php
+      $our_title = get_title() ;
+      foreach  ($our_title as $title)  echo '<li>'. $title->slug .'</li>';
+      ?>
+      </ul>
+
+     
+      <ul>
+        <?php  $categories =  get_categories();
+          foreach  ($categories as $category)  echo '<li>'. $category->cat_name .'</li>';
+          ?>
+      </ul>
+      
+
+      <ul>
+        <?php 
+        $wptc = wp_tag_cloud('smallest=12&largest=12&orderby=count&order=DESC&format=array&unit=px&echo=0'); 
+        foreach( $wptc as $wpt ) echo "<li>" . $wpt . "</li>\n"; 
+        ?>
+      </ul>
+
+
 
 
 
