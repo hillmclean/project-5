@@ -1,20 +1,24 @@
 (function ($) {
+
+  const anotherQuote = $('.quote-box');
+
   $('#another-quote').on('click', function (event) {
     event.preventDefault();
-    $.ajax({
-      method: 'get',
-      url: qod_vars.home_url,
-      data: {
-        'action': 'qod_comments',
-        'security': qod_vars.comment_nonce,
-        'the_post_id': qod_vars.post_id
-      }
-    }).done(function (data) {
+    anotherQuote[0].innerHTML = '';
 
-      let getContent = data.results.filter(function (item) {
-        if (item.multimedia !== null) {
-          return item;
-        }
-      }).slice(0, 12)
-    });
-  })(jQuery);
+    $.ajax({
+      method: 'GET',
+      url: qodVars.rest_url + '/wp/v2/posts',
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('X-WP-Nonce', qodVars.wpapi_nonce);
+      }
+    })
+
+      .done(function (data) {
+        console.log(data);
+      });
+
+
+  }); // end of .done()
+
+})(jQuery); // end of DOM Content Load
