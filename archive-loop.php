@@ -30,9 +30,9 @@ get_header(); ?>
           <div class="author-loop" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h2>Quote Authors</h2>
             <?php foreach($blog_posts as $post): setup_postdata ($post); ?>
-              <a href="<?php the_permalink()?>">
+            <a href="<?php the_permalink()?>">
                 <p><?php the_title() ?></p>
-              </a>
+              </a> 
                    
             <?php endforeach; ?>
             <?php  wp_reset_postdata(); ?>
@@ -41,17 +41,13 @@ get_header(); ?>
           <div class="category-loop" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h2>Categories</h2>
             <?php  $categories = get_categories();
-foreach ($categories as $cat) {
-   $category_link = get_category_link($cat->cat_ID);
-   echo '<a href="'.esc_url( $category_link ).'" title="'.esc_attr($cat->name).'">'.$cat->name.'</a>';
-} ?>
-                   
-    
+                foreach ($categories as $cat) {
+                  $category_link = get_category_link($cat->cat_ID);
+                  echo '<a href="'.esc_url( $category_link ).'" title="'.esc_attr($cat->name).'">'.$cat->name.'</a>';
+                } ?>
            </div> 	<!-- category-loop -->
 
-      
-
-
+    
           <div class="tag-loop">
           <h2>Tags</h2>
             <?php 

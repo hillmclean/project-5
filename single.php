@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The template single post page
  *
  * @package QOD_Starter_Theme
  */

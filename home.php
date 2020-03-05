@@ -21,17 +21,21 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-        <?php get_template_part( 'template-parts/content' ); ?>
+			<article class="quote-box">
 
-			<?php endwhile; ?>
+				<?php get_template_part( 'template-parts/content' ); ?>
 
-			<?php the_posts_navigation(); ?>
+					<?php endwhile; ?>
 
-		<?php else : ?>
+					<?php the_posts_navigation(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<?php else : ?>
 
-    <?php endif; ?>
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+				<?php endif; ?>
+		
+		</article>
     
     <button type="button" id="another-quote">Close Comments</button>
 
