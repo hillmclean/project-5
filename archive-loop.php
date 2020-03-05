@@ -40,14 +40,15 @@ get_header(); ?>
 
           <div class="category-loop" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h2>Categories</h2>
-            <?php foreach($categories as $category): setup_postdata ($category); ?>
-              <a  href="<?php get_category_link($category); ?>">
-                <p><?php echo $category->cat_name ?></p>
-              </a>
+            <?php  $categories = get_categories();
+foreach ($categories as $cat) {
+   $category_link = get_category_link($cat->cat_ID);
+   echo '<a href="'.esc_url( $category_link ).'" title="'.esc_attr($cat->name).'">'.$cat->name.'</a>';
+} ?>
                    
-            <?php endforeach; ?>
-            <?php  wp_reset_postdata(); ?>
+    
            </div> 	<!-- category-loop -->
+
       
 
 
