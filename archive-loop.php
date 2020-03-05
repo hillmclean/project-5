@@ -10,13 +10,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-    <?php
-	$args = array( 
-    'field' => 'slug',
-	);
-	$products = new WP_Query($args);
-	?>
-
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -25,20 +18,36 @@ get_header(); ?>
 				?>
       </header><!-- .page-header -->
 
-      <ul>
-        <?php
-      $our_title = get_title() ;
-      foreach  ($our_title as $title)  echo '<li>'. $title->slug .'</li>';
+      <?php
+        $args = array( 
+          'post_type' => 'post',
+          'posts_per_page'	=> -1
+        );
+        $blog_posts = get_posts( $args ); 
+        $categories =  get_categories( $args);
       ?>
-      </ul>
-
-     
-      <ul>
-        <?php  $categories =  get_categories();
-          foreach  ($categories as $category)  echo '<li>'. $category->cat_name .'</li>';
-          ?>
-      </ul>
       
+      <div class="author-loop" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <?php foreach($blog_posts as $post): setup_postdata ($post); ?>
+        <a href="<?php the_permalink()?>">
+						<h2><?php the_title() ?></h2>
+              </a>
+                   
+			<?php endforeach; ?>
+			<?php  wp_reset_postdata(); ?>
+      </div> 	<!-- journal-grid -->
+
+      <div class="category-loop" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <?php foreach($categories as $category): setup_postdata ($category); ?>
+      <a class="button-text" href="<?php echo get_category_link($category); ?>">
+        <li><?php echo $category->cat_name ?></li>
+              </a>
+                   
+			<?php endforeach; ?>
+			<?php  wp_reset_postdata(); ?>
+      </div> 	<!-- journal-grid -->
+      
+
 
       <ul>
         <?php 
@@ -48,23 +57,6 @@ get_header(); ?>
       </ul>
 
 
-
-
-
-      <?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
 
