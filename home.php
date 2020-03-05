@@ -37,7 +37,7 @@ get_header(); ?>
 		
 		</article>
     
-    <button type="button" id="another-quote">Close Comments</button>
+    <button type="button" id="another-quote">Another Quote</button>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

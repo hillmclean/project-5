@@ -30,7 +30,6 @@
 
       }); // end of .done()
 
-
   }); // end of event listener
 
 })(jQuery); // end of DOM Content Load
