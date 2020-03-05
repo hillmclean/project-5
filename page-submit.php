@@ -7,8 +7,21 @@
 
 get_header(); ?>
 
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+    <?php
+global $post;
+if ( ! is_user_logged_in() ) {
+    ?>
+    <p>
+    CUSTOM CONTENT THAT DISPLAYS ONLY WHEN PAGE IS PASSWORD PROTECTED
+    GOES HERE
+    </p>
+    <?php
+} else { 
+    ?>
 
       <form class="submit-form">
 
@@ -40,7 +53,10 @@ get_header(); ?>
           <input class="form-submit" type="submit" value="Submit Quote" />
       </form>
 
+      <?php } ?>
+
 		</main><!-- #main -->
-	</div><!-- #primary -->
+  </div><!-- #primary -->
+  
 
 <?php get_footer(); ?>
