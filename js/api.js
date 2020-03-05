@@ -8,7 +8,7 @@
 
     $.ajax({
       method: 'GET',
-      url: qodVars.rest_url + '/wp/v2/posts',
+      url: qodVars.rest_url + '/wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
       beforeSend: function (xhr) {
         xhr.setRequestHeader('X-WP-Nonce', qodVars.wpapi_nonce);
       }
@@ -19,11 +19,11 @@
 
         data.forEach(element => {
           let ranQuote = (`
-          <p class='quote-content'>${element.content.rendered}</p>
-          <p class='quote-author'>${element.title.rendered}</p>
-          <a href="${element._qod_quote_source_url}" target="_blank">
-            <p class='quote-source'>${element._qod_quote_source}</p>
-          </a>
+            <p class='quote-content'>${element.content.rendered}</p>
+            <p class='quote-author'>${element.title.rendered}</p>
+            <a href="${element._qod_quote_source_url}" target="_blank">
+              <p class='quote-source'>${element._qod_quote_source}</p>
+            </a>
           `);
           anotherQuote.append(ranQuote);
         });
