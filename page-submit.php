@@ -33,20 +33,19 @@ if ( ! is_user_logged_in() ) {
 
         <label for="content">Quote
           <br>
-          <textarea class="quote-field" type="text" name="content" cols="5" rows="5">
-          </textarea>
+          <textarea class="quote-field" type="text" name="content" cols="5" rows="5"></textarea>
           <br>
         </label>
 
         <label for="source">Where did you find this quote? (e.g. book name)
           <br>
-          <input class="reference-field" type="text" name="source" />
+          <input class="reference-field" type="text" name="source"/>
           <br>
         </label>
 
         <label for="url">Provide the URL of the quote source, if available.
           <br>
-          <input class="url-field" type="url" name="quote-url" />
+          <input class="url-field" type="text" name="quote-url" />
           <br>
         </label>
 

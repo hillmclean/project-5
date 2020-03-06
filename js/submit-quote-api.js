@@ -1,12 +1,18 @@
 (function ($) {
 
   $('#post-form').on('submit', function (event) {
-    console.log(event.target);
     event.preventDefault();
+    console.log(event.target[1].value.length + 'this');
+    console.log(event.target[0].value.length + 'this');
 
-    if (event.target[0].value === '') {
+    let author = event.target[0].value;
+    let content = event.target[1].value;
+
+    if (author === '' || content === '') {
       alert('Error!');
     } else {
+
+
 
       $.ajax({
         method: 'POST',
