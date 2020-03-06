@@ -19,7 +19,8 @@
         'status': 'draft'
       },
       success: function (success) {
-        console.log(success);
+        let sucMessage = (`<p class='success'>Success!</p>`);
+        alert sucMessage.text(success);
       },
       error: function (error) {
         console.log(error);
