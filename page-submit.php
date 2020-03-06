@@ -46,7 +46,7 @@ if ( ! is_user_logged_in() ) {
 
         <label for="url">Provide the URL of the quote source, if available.
           <br>
-          <input class="url-field" type="text" name="quote-url" />
+          <input class="url-field" type="url" name="quote-url" />
           <br>
         </label>
 
