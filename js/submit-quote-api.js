@@ -3,7 +3,7 @@
   $('#post-form').on('submit', function (event) {
     console.log(event.target);
     event.preventDefault();
-
+    $('#post-form')[0].reset();
 
     $.ajax({
       method: 'POST',
@@ -15,11 +15,11 @@
         'title': event.target[0].value,
         'content': event.target[1].value,
         '_qod_quote_source': event.target[2].value,
-        'qod_quote_source_url': event.target[3].value,
+        '_qod_quote_source_url': event.target[3].value,
         'status': 'draft'
       },
-      success: function (data) {
-        console.log(data);
+      success: function (success) {
+        console.log(success);
       },
       error: function (error) {
         console.log(error);
@@ -27,4 +27,5 @@
     })
 
   }); // end of event listener
+
 })(jQuery);

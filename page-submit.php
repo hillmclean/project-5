@@ -27,7 +27,7 @@ if ( ! is_user_logged_in() ) {
 
         <label for="title">Author of Quote
           <br>
-          <input class="author-field" type="text" name="title" placeholder=" " />
+          <input class="author-field" type="text" name="title" />
           <br>
         </label>
 
@@ -40,13 +40,13 @@ if ( ! is_user_logged_in() ) {
 
         <label for="source">Where did you find this quote? (e.g. book name)
           <br>
-          <input class="reference-field" type="text" name="source" placeholder=" " />
+          <input class="reference-field" type="text" name="source" />
           <br>
         </label>
 
         <label for="url">Provide the URL of the quote source, if available.
           <br>
-          <input class="url-field" type="text" name="quote-url" placeholder=" " />
+          <input class="url-field" type="text" name="quote-url" />
           <br>
         </label>
 
