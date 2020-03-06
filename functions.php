@@ -60,13 +60,20 @@ function qod_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'qod-api', get_template_directory_uri() . '/build/js/api.min.js', array('jquery'), false, true );
+	wp_enqueue_script( 'qod-random-api', get_template_directory_uri() . '/build/js/random-quote-api.min.js', array('jquery'), false, true );
+	wp_enqueue_script( 'submit-quote-api', get_template_directory_uri() . '/build/js/submit-quote-api.min.js', array('jquery'), false, true );
+
 	
-	wp_localize_script( 'qod-api', 'qodVars', array(
+	wp_localize_script( 'qod-random-api', 'qodVars', array(
 		'rest_url' => esc_url_raw( rest_url() ),
 		'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
 		'post_id' => get_the_ID()
-) );
+	) );
+
+	wp_localize_script( 'submit-quote-api', 'qodSubmit', array(
+		'rest_url' => esc_url_raw( rest_url() ),
+		'nonce' => wp_create_nonce( 'wp_rest' ),
+	) );
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
 

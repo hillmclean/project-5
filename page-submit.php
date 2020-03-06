@@ -16,41 +16,41 @@ global $post;
 if ( ! is_user_logged_in() ) {
     ?>
     <p>
-    CUSTOM CONTENT THAT DISPLAYS ONLY WHEN PAGE IS PASSWORD PROTECTED
-    GOES HERE
+    Sorry, you must be logged in to submit a quote!
     </p>
+    <a href="<?php admin_url() ?>">Click here to login.</a>
     <?php
 } else { 
     ?>
 
-      <form class="submit-form">
+      <form id="post-form" name="post-form" class="submit-form">
 
-        <label>Author of Quote
+        <label for="title">Author of Quote
           <br>
-          <input class="author-field" type="text" name="author" placeholder=" " />
+          <input class="author-field" type="text" name="title" placeholder=" " />
           <br>
         </label>
 
-        <label>Quote
+        <label for="content">Quote
           <br>
-          <textarea class="quote-field" type="text" name="quote" cols="5" rows="5">
+          <textarea class="quote-field" type="text" name="content" cols="5" rows="5">
           </textarea>
           <br>
         </label>
 
-        <label>Where did you find this quote? (e.g. book name)
+        <label for="source">Where did you find this quote? (e.g. book name)
           <br>
-          <input class="reference-field" type="text" name="reference" placeholder=" " />
+          <input class="reference-field" type="text" name="source" placeholder=" " />
           <br>
         </label>
 
-        <label>Provide the URL of the quote source, if available.
+        <label for="url">Provide the URL of the quote source, if available.
           <br>
           <input class="url-field" type="text" name="quote-url" placeholder=" " />
           <br>
         </label>
 
-          <input class="form-submit" type="submit" value="Submit Quote" />
+          <input class="form-submit" type="submit" name="submit" value="Submit Quote" />
       </form>
 
       <?php } ?>

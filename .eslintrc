@@ -23,6 +23,7 @@
     "$": false,
     "_": false,
     "qodVars": false,
+    "qodSubmit": false
   },
   "env": {
     "es6": true,
