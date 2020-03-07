@@ -10,13 +10,22 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+
+			<article class="quote-box">
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+			
 
-			<?php the_post_navigation(); ?>
+			<!-- <?php the_post_navigation(); ?> -->
 
 		<?php endwhile; // End of the loop. ?>
+
+		</article>
+
+		<button type="button" id="another-quote">Another Quote</button>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
