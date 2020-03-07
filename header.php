@@ -21,7 +21,9 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
 			<div class="header-logo-box">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<img class="qod-logo" src="<?php echo get_template_directory_uri(); ?>/qod-logo.svg" alt="Inhabitent Logo" />
+</a>
 
 
 			<header id="masthead" class="site-header" role="banner">

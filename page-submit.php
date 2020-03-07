@@ -18,7 +18,7 @@ if ( ! is_user_logged_in() ) {
     <p>
     Sorry, you must be logged in to submit a quote!
     </p>
-    <a href="<?php admin_url() ?>">Click here to login.</a>
+    <a href="<?php echo esc_url( home_url( '/wp-admin' ) ); ?>">Click here to login.</a>
     <?php
 } else { 
     ?>
@@ -48,10 +48,9 @@ if ( ! is_user_logged_in() ) {
           <input class="url-field" type="text" name="quote-url" />
           <br>
         </label>
-
+        <div class="submission-status"></div>
           <input class="form-submit" type="submit" name="submit" value="Submit Quote" />
       </form>
-
       <?php } ?>
 
 		</main><!-- #main -->

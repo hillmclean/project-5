@@ -1,18 +1,17 @@
 (function ($) {
 
+  let subStatus = $('.submission-status');
+
   $('#post-form').on('submit', function (event) {
     event.preventDefault();
-    console.log(event.target[1].value.length + 'this');
-    console.log(event.target[0].value.length + 'this');
+    subStatus.html('');
 
     let author = event.target[0].value;
     let content = event.target[1].value;
 
     if (author === '' || content === '') {
-      alert('Error!');
+      subStatus.append('<p>There was an error with your submission. Make sure both Quote Author and Quote fields are filled in.</p>');
     } else {
-
-
 
       $.ajax({
         method: 'POST',
@@ -35,9 +34,12 @@
         }
       })
 
-      alert('success!');
+      subStatus.append('<p>Success! Thank you for your submission. </p>');
     }
 
     $('#post-form')[0].reset();
+
+
+
   }); // end of event listener
 })(jQuery);

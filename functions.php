@@ -96,3 +96,26 @@ require get_template_directory() . '/inc/metaboxes.php';
  * Custom WP API modifications.
  */
 require get_template_directory() . '/inc/api.php';
+
+
+// set posts per page 
+
+add_action( 'pre_get_posts',  'set_posts_per_page'  );
+function set_posts_per_page( $query ) {
+
+  if ( ( ! is_admin() ) && ( $query === $GLOBALS['wp_query'] ) && ( $query->is_search() ) ) {
+    $query->set( 'posts_per_page', 10 );
+  }
+  elseif ( ( ! is_admin() ) && ( $query === $GLOBALS['wp_the_query'] ) && ( $query->is_archive() ) ) {
+    $query->set( 'posts_per_page', 5 );
+  }
+
+  return $query;
+}
+
+// sets orders of post to random on home.php
+add_action('pre_get_posts','alter_query');
+function alter_query($query){
+    if ($query->is_main_query() &&  is_home())
+        $query->set('orderby', 'rand'); //Set the order to random
+}
