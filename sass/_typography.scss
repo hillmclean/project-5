@@ -1,6 +1,9 @@
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+html {
+	font-size: 1rem;
+}
 
 body,
 button,
@@ -9,7 +12,6 @@ select,
 textarea {
 	color: $color__text-main;
 	font-family: $font__main;
-	font-size: 1rem;
 	line-height: $font__line-height-body;
 }
 
@@ -23,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
 	margin-bottom: $base__space-unit;
+	font-size: 1.25rem;
 }
 
 dfn, cite, em, i {

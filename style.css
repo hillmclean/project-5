@@ -253,6 +253,9 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+html {
+  font-size: 1rem; }
+
 body,
 button,
 input,
@@ -260,7 +263,6 @@ select,
 textarea {
   color: #ffffff;
   font-family: "exomedium";
-  font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
@@ -269,7 +271,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Copy */
 p {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem; }
 
 dfn, cite, em, i {
   font-style: italic; }
