@@ -12,7 +12,7 @@
 	<div class="entry-content">
 		<p><?php the_excerpt(); ?></p>
 		<div class="citation">
-			<h2 class="cit-title"><?php the_title(); ?></h2>
+			<h2 class="cit-title"> — <?php the_title(); ?></h2>
 		 		<?php if( get_post_meta('_qod_quote_source_url') ): ?>
 				<a href="<?php get_post_meta('_qod_quote_source_url');?>">
 				<?php endif; ?>	
