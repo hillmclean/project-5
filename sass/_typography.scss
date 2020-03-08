@@ -36,7 +36,15 @@ p {
 
 .quote-source {
 	font-style: italic;
-	color: $color__text-secondary;
+}
+
+p {
+.quote-src-link {
+	font-style: italic;
+		a {
+		color: $color__text-secondary;
+		}
+	}
 }
 
 dfn, cite, em, i {

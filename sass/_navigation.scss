@@ -64,6 +64,10 @@ a {
 
 		a {
 		color: $color__text-secondary;
+
+		&:hover {
+			color: $color__link-hover;
+		}
 		}
 
 		&:nth-child(1) {

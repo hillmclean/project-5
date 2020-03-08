@@ -22,17 +22,13 @@
           if (element._qod_quote_source_url.length > 0) {
             let ranQuoteSrc1 = (`
             <p class='quote-content'>${element.content.rendered}</p>
-            <p class='quote-author'> — ${element.title.rendered},  <span>
-              <a href="${element._qod_quote_source_url}" target="_blank">${element._qod_quote_source}
-              </a></span> 
-            </p>
+            <p class='quote-author'> — ${element.title.rendered}, <span class='quote-src-link'><a href="${element._qod_quote_source_url}" target="_blank">${element._qod_quote_source}</a></span></p>
             `);
             anotherQuote.append(ranQuoteSrc1);
           } else if (element._qod_quote_source.length > 0) {
             let ranQuoteSrc2 = (` 
             <p class='quote-content'>${element.content.rendered}</p>
-            <p class='quote-author'> — ${element.title.rendered}, <span class='quote-source'>${element._qod_quote_source}</span>
-            </p>
+            <p class='quote-author'> — ${element.title.rendered}<span class='quote-source'>,  ${element._qod_quote_source}</span></p>
             `);
             anotherQuote.append(ranQuoteSrc2);
           } else {

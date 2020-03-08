@@ -24,6 +24,14 @@ body {
   }
 }
 
+.site-info {
+    a {
+    &:hover {
+      color: $color__text-main;
+    }
+  }
+}
+
 .site-creator {
   color: $color__text-secondary;
 }

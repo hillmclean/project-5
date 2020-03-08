@@ -12,12 +12,13 @@
 	<div class="entry-content">
 		<p><?php the_excerpt(); ?></p>
 		<div class="citation">
-			<h2 class="cit-title"> — <?php the_title(); ?></h2>
-		 		<?php if( get_post_meta('_qod_quote_source_url') ): ?>
-				<a href="<?php get_post_meta('_qod_quote_source_url');?>">
-				<?php endif; ?>	
-		 		<p><?php get_post_meta('_qod_quote_source'); ?></p></a>
-	
+
+			<?php 
+			$meta_quote_src = get_post_meta( get_the_ID(), '_qod_quote_source', true );
+			$meta_quote_src_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true ); ?>
+
+			<p class='quote-author'> — <?php the_title(); ?><span class='quote-src-link'><a href="<?php echo $meta_quote_src_url ?>" target="_blank"><?php echo $meta_quote_src ?></a></span></p>
+			
 		</div>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

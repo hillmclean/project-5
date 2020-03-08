@@ -275,8 +275,12 @@ p {
   font-size: 1.25rem; }
 
 .quote-source {
-  font-style: italic;
-  color: #00cc00; }
+  font-style: italic; }
+
+p .quote-src-link {
+  font-style: italic; }
+  p .quote-src-link a {
+    color: #00cc00; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -477,6 +481,8 @@ a {
       top: 1.5rem; }
   .main-navigation li a {
     color: #00cc00; }
+    .main-navigation li a:hover {
+      color: #018d01; }
   .main-navigation li:nth-child(1) {
     padding-right: 1.5rem; }
   .main-navigation li:nth-child(2) {
@@ -583,11 +589,6 @@ a {
 .entry-content p {
   color: #ffffff; }
 
-.quote-src-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -626,6 +627,9 @@ body {
           justify-content: flex-start;
   margin: 0px;
   padding: 0px; }
+
+.site-info a:hover {
+  color: #ffffff; }
 
 .site-creator {
   color: #00cc00; }
