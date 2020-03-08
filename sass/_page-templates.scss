@@ -95,6 +95,50 @@ body {
   padding-bottom: $base__space-unit;
 }
 
-
+.line {
+  border-bottom: $border_dashed;
+}
 
 /* Submit a Quote Page */
+
+.submit-form {
+  input {
+  border: 1px solid $color__text-secondary;
+  box-shadow: none;
+  background: none;
+  text-shadow: none;
+  color: $color__text-secondary;
+  font-size: 1rem;
+  padding-top: $base__space-unit / 2;
+  padding-bottom: $base__space-unit / 2;
+  padding-right: $base__space-unit;
+  padding-left: $base__space-unit;
+  margin-bottom: $base__space-unit;
+
+  &:hover {
+    color: $color__link-hover;
+    border: 1px solid $color__link-hover;
+    background: none;
+    box-shadow: none;
+  }
+}
+
+  textarea {
+    background-color: $color__background-body;
+    border: 1px solid $color__text-secondary;
+    color: $color__text-secondary;
+    padding-top: $base__space-unit / 2;
+    padding-bottom: $base__space-unit / 2;
+    padding-right: $base__space-unit;
+    padding-left: $base__space-unit;
+    margin-bottom: $base__space-unit;
+  }
+}
+
+#login-here {
+  color: $color__text-secondary;
+  &:hover {
+    color: $color__link-hover;
+  }
+}
+

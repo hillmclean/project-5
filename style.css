@@ -685,4 +685,41 @@ body {
   border-bottom: 1px dashed #ffffff;
   padding-bottom: 1.5rem; }
 
+.line {
+  border-bottom: 1px dashed #ffffff; }
+
 /* Submit a Quote Page */
+.submit-form input {
+  border: 1px solid #00cc00;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+  text-shadow: none;
+  color: #00cc00;
+  font-size: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem; }
+  .submit-form input:hover {
+    color: #018d01;
+    border: 1px solid #018d01;
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+
+.submit-form textarea {
+  background-color: #222222;
+  border: 1px solid #00cc00;
+  color: #00cc00;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+#login-here {
+  color: #00cc00; }
+  #login-here:hover {
+    color: #018d01; }

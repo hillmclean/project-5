@@ -11,6 +11,13 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+    <header class="page-header">
+				<?php
+					the_title( '<h1 class="page-title-Submit">', '</h1>' );
+				?>
+			</header><!-- .page-header -->
+
+
     <?php
 global $post;
 if ( ! is_user_logged_in() ) {
@@ -18,10 +25,10 @@ if ( ! is_user_logged_in() ) {
     <p>
     Sorry, you must be logged in to submit a quote!
     </p>
-    <a href="<?php echo esc_url( home_url( '/wp-admin' ) ); ?>">Click here to login.</a>
+    <a id="login-here" href="<?php echo esc_url( home_url( '/wp-admin' ) ); ?>">Click here to login.</a>
     <?php
-} else { 
-    ?>
+    } else { 
+        ?>
 
       <form id="post-form" name="post-form" class="submit-form">
 

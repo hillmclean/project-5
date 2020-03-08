@@ -25,9 +25,10 @@ get_header(); ?>
 					get_template_part( 'template-parts/content' );
 				?>
 
+				<div class="line"></div>
+
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
 			<?php the_posts_navigation(); ?> 
 
 		<?php else : ?>
