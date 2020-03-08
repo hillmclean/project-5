@@ -16,6 +16,12 @@ body {
 
 /* Footer */
 .site-footer {
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+
   .menu {
   display: flex;
   justify-content: flex-start;
