@@ -34,6 +34,11 @@ p {
 	font-size: 1.25rem;
 }
 
+.quote-source {
+	font-style: italic;
+	color: $color__text-secondary;
+}
+
 dfn, cite, em, i {
 	font-style: italic;
 }

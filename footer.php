@@ -16,7 +16,7 @@
 				</nav><!-- #site-navigation -->
 
 				<div class="site-info">
-					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Brought to you by %s' ), 'Hillary' ); ?></a>
+					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Brought to you by %s' ), '<span class="site-creator">Hillary</span>' ); ?></a>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

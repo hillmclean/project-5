@@ -23,6 +23,10 @@ body {
   padding: 0px;
   }
 }
+
+.site-creator {
+  color: $color__text-secondary;
+}
 /* Home.php Page */
 
 .another-button {
@@ -36,6 +40,7 @@ body {
   padding-bottom: $base__space-unit / 2;
   padding-right: $base__space-unit;
   padding-left: $base__space-unit;
+  margin-bottom: $base__space-unit;
 
   &:hover {
     color: $color__link-hover;

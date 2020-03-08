@@ -274,6 +274,10 @@ p {
   margin-bottom: 1.5rem;
   font-size: 1.25rem; }
 
+.quote-source {
+  font-style: italic;
+  color: #00cc00; }
+
 dfn, cite, em, i {
   font-style: italic; }
 
@@ -579,6 +583,11 @@ a {
 .entry-content p {
   color: #ffffff; }
 
+.quote-src-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -618,6 +627,9 @@ body {
   margin: 0px;
   padding: 0px; }
 
+.site-creator {
+  color: #00cc00; }
+
 /* Home.php Page */
 .another-button {
   border: 1px solid #00cc00;
@@ -630,7 +642,8 @@ body {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-right: 1.5rem;
-  padding-left: 1.5rem; }
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem; }
   .another-button:hover {
     color: #018d01;
     border: 1px solid #018d01;
