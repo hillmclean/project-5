@@ -668,10 +668,13 @@ body {
       flex-wrap: wrap; }
   .loop-content p {
     font-size: 1rem;
-    color: #00cc00; }
+    color: #00cc00;
+    padding-right: 0.75rem;
+    margin: 0px; }
   .loop-content a {
     font-size: 1rem;
-    color: #00cc00; }
+    color: #00cc00;
+    padding-right: 0.75rem; }
 
 /* All Archives Page */
 /* Submit a Quote Page */

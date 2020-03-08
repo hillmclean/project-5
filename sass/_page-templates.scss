@@ -68,11 +68,14 @@ body {
   p {
     font-size: $font__size-base;
     color: $color__text-secondary;
+    padding-right: $base__space-unit / 2;
+    margin: 0px;
   }
 
   a {
     font-size: $font__size-base;
     color: $color__text-secondary;
+    padding-right: $base__space-unit / 2;
   }
 }
 
