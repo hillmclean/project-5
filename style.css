@@ -767,3 +767,7 @@ body {
     background: none;
     -webkit-box-shadow: none;
             box-shadow: none; }
+
+/* Search Page */
+.entry-title-search a {
+  color: #00cc00; }
