@@ -27,39 +27,23 @@ a {
 /* Menus */
 
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	padding-top: $base__space-unit * 2;
+	padding-bottom: $base__space-unit;
 
 	ul {
-		display: none;
 		list-style: none;
-		margin: 0;
-		padding-left: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
 			top: $base__space-unit;
-			left: -999rem;
-			z-index: 99999;
-
-			ul {
-				left: -999rem;
-				top: 0;
-			}
 
 			li {
 				&:hover > ul,
 				&.focus > ul {
-					left: 100%;
+					// left: 100%;
 				}
-			}
-
-			a {
-				width: 200px;
 			}
 
 			:hover > a,
@@ -73,21 +57,39 @@ a {
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			// left: auto;
 		}
 	}
 	li {
-		float: left;
-		position: relative;
+
+		a {
+		color: $color__text-secondary;
+		}
+
+		&:nth-child(1) {
+			padding-right: $base__space-unit;
+			}
+
+		&:nth-child(2) {
+			padding-left: $base__space-unit;
+			padding-right: $base__space-unit;
+			border-left: 1px solid white;
+			border-right: 1px solid white;
+			}
+
+
+		&:nth-child(3) {
+			padding-left: $base__space-unit;
+			}
+		}
+	
 
 		&:hover > a,
 		&.focus > a {
 		}
 	}
 	a {
-		display: block;
 		text-decoration: none;
-	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
@@ -96,14 +98,6 @@ a {
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-.main-navigation ul {
-	display: block;
-}
 
 
 .comment-navigation,
@@ -115,14 +109,4 @@ a {
 		overflow: hidden;
 	}
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
 }

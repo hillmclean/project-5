@@ -2,6 +2,50 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+/* All Pages */
+
+body {
+  padding: $base__space-unit;
+}
+
+/* Header */
+
+.header-logo-box {
+  margin-top: $base__space-unit;
+}
+
+/* Footer */
+.site-footer {
+  .menu {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0px;
+  padding: 0px;
+  }
+}
+/* Home.php Page */
+
+.another-button {
+  border: 1px solid $color__text-secondary;
+  box-shadow: none;
+  background: none;
+  text-shadow: none;
+  color: $color__text-secondary;
+  font-size: 1rem;
+  padding-top: $base__space-unit / 2;
+  padding-bottom: $base__space-unit / 2;
+  padding-right: $base__space-unit;
+  padding-left: $base__space-unit;
+
+  &:hover {
+    color: $color__link-hover;
+    border: 1px solid $color__link-hover;
+    background: none;
+    box-shadow: none;
+  }
+
+}
+
 /* All Archives Page */
 
 /* Submit a Quote Page */

@@ -22,8 +22,9 @@
 
 			<div class="header-logo-box">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img class="qod-logo" src="<?php echo get_template_directory_uri(); ?>/qod-logo.svg" alt="Inhabitent Logo" />
-</a>
+				<img class="qod-logo" src="<?php echo get_template_directory_uri(); ?>/qod-logo.svg" alt="Quotes on Dev Logo" />
+			</a>
+			</div>
 
 
 			<header id="masthead" class="site-header" role="banner">
