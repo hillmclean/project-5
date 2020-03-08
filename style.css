@@ -682,6 +682,7 @@ body {
 
 /* All Archives Page */
 .page-title {
-  border-bottom: 1px dashed #ffffff; }
+  border-bottom: 1px dashed #ffffff;
+  padding-bottom: 1.5rem; }
 
 /* Submit a Quote Page */
