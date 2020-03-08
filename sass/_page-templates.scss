@@ -59,6 +59,24 @@ body {
 
 }
 
+/* Archive Loop Page */
+.loop-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  p {
+    font-size: $font__size-base;
+    color: $color__text-secondary;
+  }
+
+  a {
+    font-size: $font__size-base;
+    color: $color__text-secondary;
+  }
+}
+
+
 /* All Archives Page */
 
 /* Submit a Quote Page */

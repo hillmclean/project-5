@@ -15,7 +15,7 @@ get_header(); ?>
 
 			<article class="quote-box">
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+			<?php get_template_part( 'template-parts/content'); ?>
 			
 
 			<!-- <?php the_post_navigation(); ?> -->
@@ -24,7 +24,7 @@ get_header(); ?>
 
 		</article>
 
-		<button type="button" id="another-quote">Another Quote</button>
+		<button type="button" id="another-quote" class="another-button">Show Me Another!</button>
 
 
 		</main><!-- #main -->

@@ -119,3 +119,20 @@ function alter_query($query){
     if ($query->is_main_query() &&  is_home())
         $query->set('orderby', 'rand'); //Set the order to random
 }
+
+add_filter( 'wp_tag_cloud', 'wpse_50242_unstyled_tag_cloud' );
+
+/**
+ * Change tag cloud inline style to CSS classes.
+ *
+ * @param  string $tags
+ * @return string
+ */
+function wpse_50242_unstyled_tag_cloud( $tags )
+{
+    return preg_replace(
+        "~ style='font-size: (\d+)pt;'~",
+        ' class="tag-cloud-size-\1"',
+        $tags
+    );
+}
