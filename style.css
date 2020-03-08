@@ -671,10 +671,17 @@ body {
     color: #00cc00;
     padding-right: 0.75rem;
     margin: 0px; }
+    .loop-content p:hover {
+      color: #018d01; }
   .loop-content a {
     font-size: 1rem;
     color: #00cc00;
     padding-right: 0.75rem; }
+    .loop-content a:hover {
+      color: #018d01; }
 
 /* All Archives Page */
+.page-title {
+  border-bottom: 1px dashed #ffffff; }
+
 /* Submit a Quote Page */

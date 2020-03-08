@@ -70,16 +70,28 @@ body {
     color: $color__text-secondary;
     padding-right: $base__space-unit / 2;
     margin: 0px;
+    
+    &:hover {
+      color: $color__link-hover;
+    }
   }
 
   a {
     font-size: $font__size-base;
     color: $color__text-secondary;
     padding-right: $base__space-unit / 2;
+
+    &:hover {
+      color: $color__link-hover;
+    }
   }
 }
 
 
 /* All Archives Page */
+
+.page-title {
+  border-bottom: $border_dashed;
+}
 
 /* Submit a Quote Page */
