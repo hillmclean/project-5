@@ -4,20 +4,19 @@
 
 /* Page Numbers */
 
+	.number-pagination {
+		padding-top: $base__space-unit;
+	}
 
 	.page-numbers {
-		color: $color__text-main;
 		padding-right: $base__space-unit;
 	}
 
 /* Links */
 
 a {
-	color: $color__link;
+	color: $color__text-secondary;
 
-	&:visited {
-		color: $color__text-secondary;
-	}
 	&:hover,
 	&:focus,
 	&:active {

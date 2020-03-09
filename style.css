@@ -450,15 +450,15 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 /* Page Numbers */
+.number-pagination {
+  padding-top: 1.5rem; }
+
 .page-numbers {
-  color: #ffffff;
   padding-right: 1.5rem; }
 
 /* Links */
 a {
-  color: #ffffff; }
-  a:visited {
-    color: #00cc00; }
+  color: #00cc00; }
   a:hover, a:focus, a:active {
     color: #018d01; }
   a:focus {
