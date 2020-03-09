@@ -2,13 +2,21 @@
 # Navigation
 --------------------------------------------------------------*/
 
+/* Page Numbers */
+
+
+	.page-numbers {
+		color: $color__text-main;
+		padding-right: $base__space-unit;
+	}
+
 /* Links */
 
 a {
 	color: $color__link;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $color__text-secondary;
 	}
 	&:hover,
 	&:focus,

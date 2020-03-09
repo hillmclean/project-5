@@ -449,11 +449,16 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+/* Page Numbers */
+.page-numbers {
+  color: #ffffff;
+  padding-right: 1.5rem; }
+
 /* Links */
 a {
   color: #ffffff; }
   a:visited {
-    color: #ffffff; }
+    color: #00cc00; }
   a:hover, a:focus, a:active {
     color: #018d01; }
   a:focus {
@@ -696,6 +701,9 @@ body {
             justify-content: flex-start;
     margin: 0px;
     padding: 0px; }
+
+.site-info a {
+  color: #ffffff; }
 
 @media screen and (min-width: 600px) {
   .site-info a {

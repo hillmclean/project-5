@@ -77,6 +77,9 @@ body {
 }
 
 .site-info {
+   a {
+     color: $color__text-main;
+   }
     a {
       @include tablet { 
 				padding-left: $base__space-unit;
