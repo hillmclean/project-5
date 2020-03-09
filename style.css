@@ -501,8 +501,8 @@ a {
     padding-left: 1.5rem; }
     @media screen and (min-width: 600px) {
       .main-navigation li:nth-child(3) {
-        border-right: 1px solid white;
-        padding-left: 1.5rem; } }
+        padding-right: 1.5rem;
+        border-right: 1px solid white; } }
 
 a {
   text-decoration: none; }
@@ -623,30 +623,83 @@ object {
 /* All Pages */
 body {
   padding: 1.5rem; }
+  @media screen and (min-width: 1080px) {
+    body {
+      width: 1080px;
+      margin: 0 auto; } }
+
+.site-content .quote-icon-box {
+  display: none; }
+
+@media screen and (min-width: 1080px) {
+  .site-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .site-content .quote-icon-box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      padding: 1.5rem;
+      font-size: 5rem;
+      height: 100%;
+      color: #00cc00; } }
 
 /* Header */
 .header-logo-box {
   margin-top: 1.5rem; }
 
-/* Footer */
-@media screen and (min-width: 600px) {
-  .site-footer {
+@media screen and (min-width: 1080px) {
+  .qod-logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; } }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto; } }
 
-.site-footer .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin: 0px;
-  padding: 0px; }
+/* Footer */
+.site-footer {
+  padding-top: 1.5rem; }
+  @media screen and (min-width: 600px) {
+    .site-footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  @media screen and (min-width: 1080px) {
+    .site-footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
+  .site-footer .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0px;
+    padding: 0px; }
+
+@media screen and (min-width: 600px) {
+  .site-info a {
+    padding-left: 1.5rem; } }
 
 .site-info a:hover {
   color: #ffffff; }

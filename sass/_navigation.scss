@@ -33,6 +33,7 @@ a {
 	@include tablet {
 		padding-top: 0px;
 		padding-bottom: 0px;
+
 	}
 
 	ul {
@@ -65,19 +66,20 @@ a {
 			// left: auto;
 		}
 	}
+
 	li {
 
 		a {
 		color: $color__text-secondary;
 
-		&:hover {
-			color: $color__link-hover;
-		}
+			&:hover {
+				color: $color__link-hover;
+			}
 		}
 
 		&:nth-child(1) {
 			padding-right: $base__space-unit;
-			}
+		}
 
 		&:nth-child(2) {
 			padding-left: $base__space-unit;
@@ -85,21 +87,21 @@ a {
 			border-left: 1px solid white;
 			border-right: 1px solid white;
 
-				@include tablet { 
-					padding-right: $base__space-unit;
-				}
+			@include tablet { 
+				padding-right: $base__space-unit;
 			}
+		}
 
 
 		&:nth-child(3) {
 			padding-left: $base__space-unit;
-
-				@include tablet { 
-					border-right: 1px solid white;
-					padding-left: $base__space-unit;
-				}
+		
+			@include tablet { 
+				padding-right: $base__space-unit;
+				border-right: 1px solid white;
 			}
 		}
+	}
 	
 
 		&:hover > a,

@@ -6,7 +6,38 @@
 
 body {
   padding: $base__space-unit;
+
+  @include desktop { 
+    width: $width__fixed;
+    margin: 0 auto;
+  }
 }
+
+.site-content {
+  .quote-icon-box {
+    display: none;
+  }
+}
+
+@include desktop { 
+
+  .site-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .quote-icon-box {
+      display: flex;
+      align-items: flex-end;
+      padding: $base__space-unit;
+      font-size: 5rem;
+      height: 100%;
+      color: $color__text-secondary;
+    }
+  }
+}
+
+
 
 /* Header */
 
@@ -14,12 +45,27 @@ body {
   margin-top: $base__space-unit;
 }
 
+.qod-logo {
+  @include desktop { 
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
 /* Footer */
 .site-footer {
+
+  padding-top: $base__space-unit;
 
   @include tablet {
     display: flex;
     align-items: center;
+  }
+
+  @include desktop { 
+    display: flex;
+    justify-content: flex-end;
   }
 
   .menu {
@@ -32,6 +78,9 @@ body {
 
 .site-info {
     a {
+      @include tablet { 
+				padding-left: $base__space-unit;
+			}
     &:hover {
       color: $color__text-main;
     }

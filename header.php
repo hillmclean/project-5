@@ -37,3 +37,6 @@
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">
+			<div class="quote-icon-box">
+				<i class="fas fa-quote-left quote-icon"></i>
+			</div>

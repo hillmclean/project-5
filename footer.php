@@ -6,6 +6,9 @@
  */
 
 ?>
+<div class="quote-icon-box">
+<i class="fas fa-quote-right quote-icon"></i>
+</div>
 
 			</div><!-- #content -->
 
