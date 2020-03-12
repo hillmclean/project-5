@@ -15,7 +15,7 @@
 
       $.ajax({
         method: 'POST',
-        url: qodSubmit.rest_url + '/wp/v2/posts',
+        url: qodSubmit.rest_url + 'wp/v2/posts',
         beforeSend: function (xhr) {
           xhr.setRequestHeader('X-WP-Nonce', qodSubmit.nonce);
         },

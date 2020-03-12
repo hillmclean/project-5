@@ -8,7 +8,7 @@
 
     $.ajax({
       method: 'GET',
-      url: qodVars.rest_url + '/wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+      url: qodVars.rest_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
       beforeSend: function (xhr) {
         xhr.setRequestHeader('X-WP-Nonce', qodVars.wpapi_nonce);
       }
